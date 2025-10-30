@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Dashboard de Formación Psiquiatría</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Dashboard de Formación en la Entrevista Psiquiátrica</h1>
+    <nav>
+      <button id="tab-flashcards" class="active">Tarjetas de estudio</button>
+      <button id="tab-pasapalabra">Pasapalabra</button>
+      <button id="tab-quiz">Modo Quiz</button>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Flashcards section -->
+    <section id="flashcards-section" class="tab-content">
+      <h2>Tarjetas de estudio</h2>
+      <p>Revisa conceptos clave antes de comenzar los juegos. Haz clic en la tarjeta para verla por ambos lados.</p>
+      <div id="flashcards-container" class="cards-container"></div>
+    </section>
+
+    <!-- Pasapalabra game section -->
+    <section id="pasapalabra-section" class="tab-content hidden">
+      <h2>Juego tipo Pasapalabra</h2>
+          <p>Responde cada definición con una palabra que comience con la letra indicada. Puedes dejar en blanco para pasar a la siguiente. El rosco incluye 15 letras extraídas del temario.</p>
+      <div id="rosco" class="rosco"></div>
+      <div id="pasapalabra-game" class="game-area">
+        <div id="pasapalabra-question" class="question"></div>
+        <input id="pasapalabra-answer" type="text" placeholder="Escribe tu respuesta aquí…">
+        <div class="buttons">
+          <button id="pasapalabra-submit">Responder</button>
+          <button id="pasapalabra-pass">Pasar</button>
+          <button id="pasapalabra-reset">Reiniciar</button>
+        </div>
+        <div id="pasapalabra-feedback" class="feedback"></div>
+      </div>
+    </section>
+
+    <!-- Quiz game section -->
+    <section id="quiz-section" class="tab-content hidden">
+      <h2>Modo Quiz</h2>
+      <p>Selecciona la opción correcta en cada pregunta. Al final obtendrás tu puntuación.</p>
+      <div id="quiz-game" class="game-area">
+        <div id="quiz-question" class="question"></div>
+        <ul id="quiz-options" class="options-list"></ul>
+        <button id="quiz-next" class="hidden">Siguiente</button>
+        <div id="quiz-result" class="feedback"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Basado en “La entrevista psiquiátrica en la práctica clínica” de MacKinnon, Michels y Buckley.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
